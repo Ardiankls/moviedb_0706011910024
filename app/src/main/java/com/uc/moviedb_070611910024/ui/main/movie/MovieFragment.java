@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
 
 public class MovieFragment extends Fragment {
 
-    @BindView(R.id.btn_movie)
+    @BindView(R.id.btn_detail)
     Button button;
 
 
