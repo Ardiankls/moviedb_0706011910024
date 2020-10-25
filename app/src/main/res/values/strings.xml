@@ -2,4 +2,7 @@
     <string name="app_name">moviedb_070611910024</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movies">Movies</string>
+    <string name="tv">Tv Show</string>
+    <string name="detail">Detail</string>
 </resources>
