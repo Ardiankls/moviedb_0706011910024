@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +23,7 @@ import butterknife.ButterKnife;
 
 public class SplashFragment extends Fragment {
 
-    @BindView(R.id.btn_movie)
-    Button button;
+
 
 
     public SplashFragment() {
@@ -41,12 +41,12 @@ public class SplashFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this, view);
-
-        button.setOnClickListener(view1 -> {
+        new Handler().postDelayed(() -> {
             NavDirections action = SplashFragmentDirections.actionSplashFragmentToMovieFragment();
             Navigation.findNavController(view).navigate(action);
-        });
+        }, 1500);
+
+
 
 
     }

@@ -1,6 +1,9 @@
 package com.uc.moviedb_070611910024.network;
 
+import com.uc.moviedb_070611910024.model.CastResponse;
+import com.uc.moviedb_070611910024.model.GenreResponse;
 import com.uc.moviedb_070611910024.model.MovieResponse;
+import com.uc.moviedb_070611910024.model.TvShowResponse;
 import com.uc.moviedb_070611910024.util.Constants;
 
 import retrofit2.Call;
@@ -36,5 +39,14 @@ public class RetrofitService {
     }
     public Call<MovieResponse> getMovies(){
         return api.getMovies(Constants.API_KEY);
+    }
+    public Call<TvShowResponse> getTvShow(){
+        return api.getTvShow(Constants.API_KEY);
+    }
+    public Call<GenreResponse> getGenres(String type, int id) {
+        return api.getGenres(type, id, Constants.API_KEY);
+    }
+    public Call<CastResponse> getCasts(String type, int id) {
+        return api.getCasts(type, id, Constants.API_KEY);
     }
 }

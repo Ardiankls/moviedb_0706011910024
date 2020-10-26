@@ -15,7 +15,6 @@ public class MovieViewModel extends ViewModel {
     public MovieViewModel() {
         repository = MovieRepository.getInstance();
 
-
     }
     public LiveData<List<Movie>> getMovieCollection(){
         return repository.getMovieCollection();
